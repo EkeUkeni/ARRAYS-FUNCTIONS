@@ -39,7 +39,7 @@ let fruit = ['apple', 'mango', 'banana'];
     			fruit[2] = "orange";
     			return fruit;
 		}
-       //console.log(changeFruit(fruit));
+    //    console.log(changeFruit(fruit));
 
 
 
@@ -47,16 +47,22 @@ let fruit = ['apple', 'mango', 'banana'];
 const num = [4, 5, 10, -2];
 
 function max(){
-    return num[2];
+    return Math.max(...num);
 }
-// console.log('Maximum value is ' + " " + max(num));
+// console.log('Maximum value is ' + " " + max());
 
 
 //Q.5
-const numbers = [1, 2, 3];
-const newVal = [];
+function valTimesIndex(numbers){
+	const newarray= [];
+	for (let i = 0; i < numbers.length; i++) {
+		let operation = numbers[i] * [i];
+	newarray.push(operation);
+	}
+	return newarray;
+} 
+let newArrayOfValTimesIndex = valTimesIndex([5,10,15]);
+// console.log(newArrayOfValTimesIndex);
 
-for (let i = 0; i < numbers.length; i++) {
-  newVal.splice(0, 3, 0, 2, 6);
-}
-// console.log(newVal)
+
+
